@@ -1,6 +1,7 @@
 name: Ping Render Server
 
 on:
+  workflow_dispatch:
   schedule:
     # 前一天 UTC 21:00–23:48（台灣當天 05:00–07:48）
     - cron: '0 21 * * *'
