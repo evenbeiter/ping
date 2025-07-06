@@ -2,6 +2,134 @@ name: Ping Render Server
 
 on:
   schedule:
+    # 前一天 UTC 21:00–23:48（台灣當天 05:00–07:48）
+    - cron: '0 21 * * *'
+    - cron: '12 21 * * *'
+    - cron: '24 21 * * *'
+    - cron: '36 21 * * *'
+    - cron: '48 21 * * *'
+
+    - cron: '0 22 * * *'
+    - cron: '12 22 * * *'
+    - cron: '24 22 * * *'
+    - cron: '36 22 * * *'
+    - cron: '48 22 * * *'
+
+    - cron: '0 23 * * *'
+    - cron: '12 23 * * *'
+    - cron: '24 23 * * *'
+    - cron: '36 23 * * *'
+    - cron: '48 23 * * *'
+
+    # 當天 UTC 00:00–15:00（台灣當天 08:00–23:00）
+    - cron: '0 0 * * *'
+    - cron: '12 0 * * *'
+    - cron: '24 0 * * *'
+    - cron: '36 0 * * *'
+    - cron: '48 0 * * *'
+
+    - cron: '0 1 * * *'
+    - cron: '12 1 * * *'
+    - cron: '24 1 * * *'
+    - cron: '36 1 * * *'
+    - cron: '48 1 * * *'
+
+    - cron: '0 2 * * *'
+    - cron: '12 2 * * *'
+    - cron: '24 2 * * *'
+    - cron: '36 2 * * *'
+    - cron: '48 2 * * *'
+
+    - cron: '0 3 * * *'
+    - cron: '12 3 * * *'
+    - cron: '24 3 * * *'
+    - cron: '36 3 * * *'
+    - cron: '48 3 * * *'
+
+    - cron: '0 4 * * *'
+    - cron: '12 4 * * *'
+    - cron: '24 4 * * *'
+    - cron: '36 4 * * *'
+    - cron: '48 4 * * *'
+
+    - cron: '0 5 * * *'
+    - cron: '12 5 * * *'
+    - cron: '24 5 * * *'
+    - cron: '36 5 * * *'
+    - cron: '48 5 * * *'
+
+    - cron: '0 6 * * *'
+    - cron: '12 6 * * *'
+    - cron: '24 6 * * *'
+    - cron: '36 6 * * *'
+    - cron: '48 6 * * *'
+
+    - cron: '0 7 * * *'
+    - cron: '12 7 * * *'
+    - cron: '24 7 * * *'
+    - cron: '36 7 * * *'
+    - cron: '48 7 * * *'
+
+    - cron: '0 8 * * *'
+    - cron: '12 8 * * *'
+    - cron: '24 8 * * *'
+    - cron: '36 8 * * *'
+    - cron: '48 8 * * *'
+
+    - cron: '0 9 * * *'
+    - cron: '12 9 * * *'
+    - cron: '24 9 * * *'
+    - cron: '36 9 * * *'
+    - cron: '48 9 * * *'
+
+    - cron: '0 10 * * *'
+    - cron: '12 10 * * *'
+    - cron: '24 10 * * *'
+    - cron: '36 10 * * *'
+    - cron: '48 10 * * *'
+
+    - cron: '0 11 * * *'
+    - cron: '12 11 * * *'
+    - cron: '24 11 * * *'
+    - cron: '36 11 * * *'
+    - cron: '48 11 * * *'
+
+    - cron: '0 12 * * *'
+    - cron: '12 12 * * *'
+    - cron: '24 12 * * *'
+    - cron: '36 12 * * *'
+    - cron: '48 12 * * *'
+
+    - cron: '0 13 * * *'
+    - cron: '12 13 * * *'
+    - cron: '24 13 * * *'
+    - cron: '36 13 * * *'
+    - cron: '48 13 * * *'
+
+    - cron: '0 14 * * *'
+    - cron: '12 14 * * *'
+    - cron: '24 14 * * *'
+    - cron: '36 14 * * *'
+    - cron: '48 14 * * *'
+
+    - cron: '0 15 * * *'
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping Render Server
+        run: |
+          curl -s \
+            -H "Referer: https://your-username.github.io" \
+            -H "Origin: https://your-username.github.io" \
+            https://your-render-url.onrender.com/healthcheck
+
+
+name: Ping Render Server
+
+on:
+  schedule:
     - cron: '0 21 * * *'
     - cron: '12 21 * * *'
     - cron: '24 21 * * *'
