@@ -2,7 +2,7 @@ name: Disable UptimeRobot Monitor
 
 on:
   schedule:
-    - cron: '0 15 * * *' # 台灣時間 23:00（UTC+8 = UTC 15:00）
+    - cron: '0 16 * * *' # 台灣時間 24:00（UTC+8 = UTC 16:00）
   workflow_dispatch:
 
 jobs:
